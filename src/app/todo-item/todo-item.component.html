@@ -1,0 +1,41 @@
+<html>
+
+<div >
+    <div id="editingBox">
+      <h3 *ngIf="!todo.isEditing" id="todoTitle">{{ todo.title }}</h3>
+      <input type="text" class="form-control" id="newTitle" placeholder="New Todo" 
+      [(ngModel)]="todo.title" *ngIf="todo.isEditing"/>
+    </div>
+
+<div id="buttonsBox">
+      
+    <div id="editButtonBox">
+        <button *ngIf="!todo.isEditing" class="buttons" (click)="toggleEdit()">
+          <i>Edit</i>
+        </button>
+        <button *ngIf="todo.isEditing" class="buttons" (click)="toggleEdit()">
+          <i>Done</i>
+        </button>
+      </div>
+
+    
+<div id="deleteButtonBox">
+  <button class="buttons" (click)="delete()">
+      Delete
+  </button>
+</div>
+          
+<div *ngIf="!todo.isDoing && !todo.isDone" class="doingButtonBox">
+  <button class="buttons" (click)="setDoing()">
+    Doing
+  </button>
+</div>
+  <div *ngIf="todo.isDoing && !todo.isDone" class="col-md-4">
+    <button class="buttons" (click)="setDone()">
+      Done
+    </button>
+  </div>
+       
+</div>    
+</div> 
+</html>

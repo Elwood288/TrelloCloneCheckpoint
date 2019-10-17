@@ -1,0 +1,24 @@
+html{
+  background-color: #8bb3f7;
+  border-radius: 25px;
+  margin: 0px 10px;
+  
+}
+
+#todoTitle{
+text-align: center;
+}
+.buttons{
+    border-radius: 25px;
+    margin: 0px 10px 10px 10px;
+    background-color: #b5cdf5;
+}
+
+#buttonsBox{
+  
+  display: flex;
+  flex-direction: row;
+}
+#monkey {
+  background-color: blue;
+}
